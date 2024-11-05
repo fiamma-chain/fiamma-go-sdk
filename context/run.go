@@ -13,7 +13,7 @@ func Run(handle func(Context) error) {
 	var h bool
 	var c string
 	flag.BoolVar(&h, "h", false, "this help")
-	flag.StringVar(&c, "c", "etc/bridge/conf.yml", "the configuration file")
+	flag.StringVar(&c, "c", "etc/fiamma/conf.yml", "the configuration file")
 	flag.Parse()
 	if h {
 		flag.Usage()

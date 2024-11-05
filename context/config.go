@@ -5,7 +5,7 @@ import (
 )
 
 const (
-	KeyConfFile = "ZULU_CONF_FILE"
+	KeyConfFile = "FIAMMA_CONF_FILE"
 )
 
 // SystemConfig config of baetyl system

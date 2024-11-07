@@ -12,11 +12,13 @@ require (
 	github.com/creasty/defaults v1.8.0
 	github.com/docker/go-connections v0.5.0
 	github.com/gin-gonic/gin v1.10.0
+	github.com/go-playground/validator/v10 v10.20.0
 	github.com/libsv/go-bk v0.1.6
 	github.com/panjf2000/ants/v2 v2.10.0
 	github.com/pkg/errors v0.9.1
 	github.com/qiangxue/fasthttp-routing v0.0.0-20160225050629-6ccdc2a18d87
 	github.com/satori/go.uuid v1.2.0
+	github.com/shopspring/decimal v1.4.0
 	github.com/stretchr/testify v1.9.0
 	github.com/valyala/fasthttp v1.57.0
 	go.uber.org/zap v1.27.0
@@ -39,7 +41,6 @@ require (
 	github.com/go-ozzo/ozzo-routing v2.1.4+incompatible // indirect
 	github.com/go-playground/locales v0.14.1 // indirect
 	github.com/go-playground/universal-translator v0.18.1 // indirect
-	github.com/go-playground/validator/v10 v10.20.0 // indirect
 	github.com/goccy/go-json v0.10.2 // indirect
 	github.com/golang/gddo v0.0.0-20210115222349-20d68f94ee1f // indirect
 	github.com/jackc/pgpassfile v1.0.0 // indirect

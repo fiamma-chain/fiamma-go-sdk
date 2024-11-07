@@ -5,15 +5,16 @@ import (
 )
 
 const (
-	VerifyTaskPending = "pending"
-	VerifyTaskDone    = "done"
-	VerifyTaskFailed  = "failed"
+	TaskPending = "pending"
+	TaskDone    = "done"
+	TaskFailed  = "failed"
 )
 
-type VerificationRecord struct {
+type TaskRecord struct {
 	gorm.Model
-	RequestID string `gorm:"unique;not null;"`
-	TxHash    string `gorm:"unique;not null;"`
-	Address   string `gorm:"not null;"`
-	Status    string `gorm:"not null;default:'pending'"`
+	TaskType  string  `gorm:"not null;default:'verify'"`
+	RequestID string  `gorm:"uniqueIndex;not null;"`
+	TxHash    *string `gorm:"uniqueIndex"`
+	Address   string  `gorm:"not null;"`
+	Status    string  `gorm:"not null;default:'pending'"`
 }

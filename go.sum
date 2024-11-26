@@ -51,6 +51,8 @@ github.com/go-playground/validator/v10 v10.20.0/go.mod h1:dbuPbCMFw/DrkbEynArYaC
 github.com/go-stack/stack v1.6.0/go.mod h1:v0f6uXyyMGvRgIKkXu+yp6POWl0qKG85gN/melR3HDY=
 github.com/goccy/go-json v0.10.2 h1:CrxCmQqYDkv1z7lO7Wbh2HN93uovUHgrECaO5ZrCXAU=
 github.com/goccy/go-json v0.10.2/go.mod h1:6MelG93GURQebXPDq3khkgXZkazVtN9CRI+MGFi0w8I=
+github.com/golang-jwt/jwt/v5 v5.2.1 h1:OuVbFODueb089Lh128TAcimifWaLhJwVflnrgM17wHk=
+github.com/golang-jwt/jwt/v5 v5.2.1/go.mod h1:pqrtFR0X4osieyHYxtmOUWsAWrfe1Q5UVIyoH402zdk=
 github.com/golang/gddo v0.0.0-20210115222349-20d68f94ee1f h1:16RtHeWGkJMc80Etb8RPCcKevXGldr57+LOyZt8zOlg=
 github.com/golang/gddo v0.0.0-20210115222349-20d68f94ee1f/go.mod h1:ijRvpgDJDI262hYq/IQVYgf8hd8IHUs93Ol0kvMBAx4=
 github.com/golang/lint v0.0.0-20170918230701-e5d664eb928e/go.mod h1:tluoj9z5200jBnyusfRPU2LqT6J+DAorxEvtC7LHB+E=

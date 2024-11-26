@@ -13,6 +13,7 @@ require (
 	github.com/docker/go-connections v0.5.0
 	github.com/gin-gonic/gin v1.10.0
 	github.com/go-playground/validator/v10 v10.20.0
+	github.com/golang-jwt/jwt/v5 v5.2.1
 	github.com/libsv/go-bk v0.1.6
 	github.com/panjf2000/ants/v2 v2.10.0
 	github.com/pkg/errors v0.9.1

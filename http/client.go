@@ -7,6 +7,7 @@ import (
 	"io/ioutil"
 	"net"
 	gohttp "net/http"
+	"net/url"
 	"strings"
 	"time"
 
@@ -18,6 +19,7 @@ import (
 )
 
 var jsonHeaders = map[string]string{"Content-Type": "application/json"}
+var formHeaders = map[string]string{"Content-Type": "application/x-www-form-urlencoded"}
 
 // Client client of http server
 type Client struct {
@@ -128,6 +130,18 @@ func (c *Client) DeleteURL(url string, header ...map[string]string) (*gohttp.Res
 
 func (c *Client) PostURL(url string, body io.Reader, header ...map[string]string) (*gohttp.Response, error) {
 	return c.SendUrl("POST", url, body, header...)
+}
+
+func (c *Client) PostURLWithParams(urlStr string, params map[string]string, header ...map[string]string) ([]byte, error) {
+	header = append(header, formHeaders)
+
+	d := url.Values{}
+	for k, v := range params {
+		d[k] = []string{v}
+	}
+	form := d.Encode()
+
+	return c.PostJSON(urlStr, []byte(form), header...)
 }
 
 func (c *Client) PutURL(url string, body io.Reader, header ...map[string]string) (*gohttp.Response, error) {

@@ -6,7 +6,7 @@ toolchain go1.22.8
 
 require (
 	github.com/btcsuite/btcd v0.24.2
-	github.com/btcsuite/btcd/btcec/v2 v2.3.4
+	github.com/btcsuite/btcd/btcec/v2 v2.3.3
 	github.com/btcsuite/btcd/chaincfg/chainhash v1.1.0
 	github.com/conduitio/bwlimit v0.1.0
 	github.com/creasty/defaults v1.8.0

@@ -141,7 +141,11 @@ func (c *Client) PostURLWithParams(urlStr string, params map[string]string, head
 	}
 	form := d.Encode()
 
-	return c.PostJSON(urlStr, []byte(form), header...)
+	r, err := c.PostURL(urlStr, strings.NewReader(form), header...)
+	if err != nil {
+		return nil, errors.Trace(err)
+	}
+	return HandleResponse(r)
 }
 
 func (c *Client) PutURL(url string, body io.Reader, header ...map[string]string) (*gohttp.Response, error) {

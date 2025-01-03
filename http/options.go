@@ -55,8 +55,8 @@ type ClientOptions struct {
 // NewClientOptions creates client options with default values
 func NewClientOptions() *ClientOptions {
 	return &ClientOptions{
-		Timeout:               30 * time.Second,
-		KeepAlive:             30 * time.Second,
+		Timeout:               60 * time.Second,
+		KeepAlive:             60 * time.Second,
 		MaxIdleConns:          100,
 		IdleConnTimeout:       90 * time.Second,
 		TLSHandshakeTimeout:   10 * time.Second,

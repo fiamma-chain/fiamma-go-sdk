@@ -223,7 +223,7 @@ func PopulateFailedResponse(cc *Context, err error, abort bool) {
 		status = http.StatusInternalServerError
 	}
 
-	cc.Logger.Error("process failed.", log.Code(err))
+	//cc.Logger.Info("process failed.", log.Code(err))
 
 	body := gin.H{
 		"code":          code,
@@ -260,7 +260,7 @@ func Wrapper(handler HandlerFunc) func(c *gin.Context) {
 		}()
 		res, err := handler(cc)
 		if err != nil {
-			cc.Logger.Error("failed to handler request", log.Code(err), log.Error(err))
+			cc.Logger.Info("failed to handler request", log.Code(err), log.Error(err))
 			PopulateFailedResponse(cc, err, false)
 			return
 		}

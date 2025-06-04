@@ -10,7 +10,7 @@ const (
 	LpTxStatePending    = "pending"
 	LpTxStateProcessing = "processing"
 	LpTxStateInvalid    = "invalid"
-	LpTxStateDone       = "done"
+	LpTxStateSuccess    = "success"
 )
 
 type LpTxInfo struct {

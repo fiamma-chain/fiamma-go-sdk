@@ -140,6 +140,13 @@ func (j *JWTHelper) jwtFromHeader(c *gin.Context, key string) (string, error) {
 	if authHeader == "" {
 		return "", ErrEmptyAuthHeader
 	}
+
+	// Support Bearer token format: "Bearer <token>"
+	if strings.HasPrefix(authHeader, "Bearer ") {
+		return strings.TrimPrefix(authHeader, "Bearer "), nil
+	}
+
+	// For backward compatibility, also support without Bearer prefix
 	return authHeader, nil
 }
 

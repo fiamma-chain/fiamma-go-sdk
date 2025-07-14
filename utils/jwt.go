@@ -24,6 +24,12 @@ type JWTConfig struct {
 	TokenLookup      string        `yaml:"tokenLookup" json:"tokenLookup" default:"header: jwt, query: jwt, param: jwt, cookie: jwt"`
 }
 
+type JWTInfo struct {
+	Token      string    `json:"token"`
+	Expire     time.Time `json:"expire"`
+	MaxRefresh time.Time `json:"maxRefresh"`
+}
+
 const (
 	JWTKey        = "jwt"
 	JWTExpire     = "jwt_expire"

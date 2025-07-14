@@ -21,7 +21,7 @@ type JWTConfig struct {
 	PubKeyFile       string        `yaml:"pubKeyFile" json:"pubKeyFile"`
 	Timeout          time.Duration `yaml:"timeout" json:"timeout" default:"30m"`
 	MaxRefresh       time.Duration `yaml:"maxRefresh" json:"maxRefresh" default:"1h"`
-	TokenLookup      string        `yaml:"tokenLookup" json:"tokenLookup" default:"header: jwt, query: jwt, param: jwt, cookie: jwt"`
+	TokenLookup      string        `yaml:"tokenLookup" json:"tokenLookup" default:"header: jwt, header: Authorization, query: jwt, param: jwt, cookie: jwt"`
 }
 
 type JWTInfo struct {

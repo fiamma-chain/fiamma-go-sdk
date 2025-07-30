@@ -20,6 +20,7 @@ const (
 	ErrResourceDeleteForbidden = "ErrResourceDeleteForbidden"
 	ErrResourceHasBeenUsed     = "ErrResourceHasBeenUsed"
 	ErrInvalidToken            = "ErrInvalidToken"
+	ErrTooManyRequests         = "ErrTooManyRequests"
 
 	// * unknown
 	ErrUnknown = "UnknownError"
@@ -31,8 +32,12 @@ func getHTTPStatus(c Code) int {
 		return http.StatusNotFound
 	case ErrRequestAccessDenied:
 		return http.StatusUnauthorized
-	case ErrResourceHasBeenUsed:
+	case ErrResourceAccessForbidden, ErrResourceHasBeenUsed:
 		return http.StatusForbidden
+	case ErrResourceConflict:
+		return http.StatusConflict
+	case ErrTooManyRequests:
+		return http.StatusTooManyRequests
 	case ErrUnknown:
 		return http.StatusInternalServerError
 	default:

@@ -10,9 +10,9 @@ type Code string
 // all codes
 const (
 	// * request
-	ErrRequestAccessDenied   = "ErrRequestAccessDenied"
-	ErrRequestMethodNotFound = "ErrRequestMethodNotFound"
-	ErrRequestParamInvalid   = "ErrRequestParamInvalid"
+	ErrRequestAccessDenied   Code = "ErrRequestAccessDenied"
+	ErrRequestMethodNotFound      = "ErrRequestMethodNotFound"
+	ErrRequestParamInvalid        = "ErrRequestParamInvalid"
 	// * resource
 	ErrResourceNotFound        = "ErrResourceNotFound"
 	ErrResourceAccessForbidden = "ErrResourceAccessForbidden"
